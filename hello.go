@@ -1,22 +1,8 @@
 package gohello
 
-import "errors"
+import "fmt"
 
-var Greetings = map[string]string{
-  "Chinese": "你好",
-  "English": "Hello",
-  "French": "Bonjour",
-  "Hungarian": "Jó napot kívánok!",
-  "Japanese":"こんにちは",
-  "Russian":"привет",
-  "Ukrainian":"привіт", 
-  }
-
-
-func Hello(lang string) (greeting string, err error) {
-    if gr, ok := Greetings[lang]; ok {
-        return gr, nil
-    } else {
-        return "", errors.New("Unknown language")
-    } 
+func SayHello() {
+	fmt.Println("Hello from gohello")
 }
+
